@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+:root {
+  /* dark shades of primary color*/
+  --transition: all 0.3s linear;
+ 
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 70vh;  
+}
+
+body {
+  background: rgb(249, 249, 249);
+  color: rgb(222, 222, 222);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  
+}
+h1 {
+  font-size: 3rem;
+  
+}
+h2 {
+  font-size: 2rem;
+  
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: white;
+  
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 0.9rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*  global classes */
+
+/* section */
+.section {
+  width: 80vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+@media screen and (min-width: 992px) {
+  .section {
+    width: 95vw;
+  }
+}
+
+/*
+=============== 
+Navbar
+===============
+*/
+nav {
+  background: rgb(252, 252, 252);
+  -webkit-box-shadow: 0 8px 6px -6px rgb(192, 194, 194);
+  -moz-box-shadow: 0 8px 6px -6px rgb(192, 194, 194);
+  box-shadow: 0 8px 6px -6px rgb(236, 238, 238)
+ 
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: rgb(67, 67, 67);
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.4s linear;
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  transform: rotate(90deg);
+}
+
+.links a:hover {
+  background: rgb(255, 255, 255);
+}
+
+
+.links-container {
+  height: 0;
+  display: flex;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.show-container {
+  height: 3rem;
+  background: #ffffff;
+}
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links-container {
+    height: auto !important;
+  }
+  .links {
+    display: flex;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+
+}
+.social-icons {
+  display: flex;
+  font-size: 15px;
+  
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  color: rgb(0, 0, 0);
+  transition: all 0.3s linear;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Footer style*/
+footer {
+  margin-top: 20px
+}
+
+
+/* Hero */
+.hero-paragraph {
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+ 
+}
+
+.hero-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+span{
+  color: #000;
+  font-weight: bold;
+  
+}
+
+.content {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.back-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.5rem;
+
+}
+
+.back-btn:hover{
+  color: #2A73E8;
+}
+.user-avatar {
+  font-size: 2.5rem;
+  margin-left: 1rem;
+  color: #c7c7c7;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  
+}
+
+.user-name {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  margin-top: 0.3rem;
+  font-weight: bold;
+}
+
+.user-container {
+  display: flex;
+}
+
+/* Date Picker */
+.container{
+  height: 250px;
+  width: 50%;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+  align-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  box-shadow: 1px 1px 12px #dddddf;
+  border-radius: 20px;
+}
+.date_time_heading {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: lightgrey;
+}
+
+.container-date {
+  height: 20%;  
+  
+}
+
+.date_time_btn {
+  margin-top: 50px;
+  font-size: 1em;
+  color: white;
+  border-radius: 2px;
+  background-color:#2A73E8;
+  font-weight: bolder;
+  height: 40px;
+  width: 160px;
+  border-radius: 5px; 
+}
+
+.date_time_btn:hover{
+  background-color: #709ee8;
+}
+
+/* hero */
+.hero {
+  width: 70vw;
+  display: flex;
+  margin: auto;
+  margin-top: 2px;
+  object-fit: cover;
+}
+
+.price {
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: bold;
+  
+}
+
+.avatar {
+  font-size: 2.8rem;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.login_signup_button {
+  color:rgb(77, 77, 77);
+  font-size: 0.9rem;
+  padding: 10px;
+  background-color: #fff;
+  font-weight: bold;
+  border-radius: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Booka home service appointment heading*/
+.home_para_1 {
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  text-transform: none;
+  color: rgb(82, 82, 82);
+  font-weight: bold;
+  
+}
+
+/* */
+.back_button{
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
